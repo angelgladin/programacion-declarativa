@@ -1,7 +1,7 @@
 import Data.List (nub, sort)
 
 gtrPower2 :: Int -> Int
-gtrPower2 n = maximum $ takeWhile (< n) $ map (2 ^) [1 ..]
+gtrPower2 n = last $ takeWhile (< n) $ map (2 ^) [0 ..]
 
 inarow :: (Eq a) => [a] -> Int
 inarow xs = maximum $ map length $ split xs []

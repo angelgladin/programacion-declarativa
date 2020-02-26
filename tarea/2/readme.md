@@ -15,74 +15,43 @@ En el archivo de especificación de la prática viene todo explicado
 ## Entorno
 
 * `ghci`: The Glorious Glasgow Haskell Compilation System, version 8.6.5
+* `latexmk`: Latexmk, John Collins, 17 Jan. 2018. Version 4.55
 
 ## Ejecución
 
 Estando ubicado con la términal en el directorio de la práctica,
-ejecutar `ghci` y después `:l src/pset1.hs` como se muestra enseguida.
+ejecutar `ghci` y después `:l src/hs/pset2.hs` como se muestra enseguida,
 
 ![](assets/1.png)
 
-### Strings
+### `gtrPower2`
 
 ![](assets/2.png)
 
-### Merge Sort
-
+### `inarow`
 ![](assets/3.png)
 
-### Coloración
-
-Para la función `esBuena` primero hice la función `coloraciones` para generar 
-todas las posibles buenas coloraciones.
-
-Para ello lo primero que se hará es obtener una coloración arbitraria de `coloraciones`, 
-por ejemplo tomemos la coloración indexada de esa lista número 42.
+### `ramanujan`
 
 ![](assets/4.png)
 
-Podemos verificar que en efecto es una coloración válida.
+Aquí hice unas pequeñas observaciones al momento de implementar la función, 
+quité simetrías, una tupla de la lista solo tiene elementos
+**distintos** y los el contenido de cada tuple está en orden creciente.
 
-![](assets/graph_colored_example.png)
+### Parte teórica
 
-Por cierto, me salieron 432 coloraciones válidas con las configuraciones que 
-se nos dieron.
-
-## Comentarios
-
-Con la biblioteca de `networkx` y `matplotlib` en Python hice dibujé la gráfica para 
-apoyarme visualmente para ver como se veía la gráfica y en checar rápidamente 
-las coloraciones que obtuve, para eso hice el siguiente script.
-
-```python
-import networkx as nx
-import matplotlib.pyplot as plt
-
-g = nx.Graph()
-
-edges = [('Albania', 'Montenegro'), ('Albania', 'Kosovo'), ('Albania', 'Macedonia'),
-         ('Bulgaria', 'Macedonia'), ('BosniayHerzegovina', 'Montenegro'),
-         ('Kosovo', 'Macedonia'), ('Kosovo', 'Montenegro')]
-
-for (a, b,) in edges:
-    g.add_edge(a, b)
-
-nx.draw(g, with_labels=True)
-plt.savefig("graph.png")
-
-```
-
-Dando como resultado la siguiente imagen.
-
-![](assets/graph.png)
-
-En la parte de `#coloraciones` en `src/pset1.hs` de la línea 101 a 113 quise hacerlo 
-más dinámico pero ya me quería dormir e hice restringido los colores y las ciudades.
+Se encuentra en la raíz del proyecto con el nombre de `parte-teorica.pdf`.
 
 ## Referencias
 
 * https://hackage.haskell.org/package/base-4.12.0.0/docs/src/GHC.List.html#takeWhile
-
+* https://www.inf.ed.ac.uk/teaching/courses/inf1/fp/reading/walker-proofs.pdf
+* Thinking Functionally with Haskell 1st Edition by Richard Bird.
+* https://www.cs.dartmouth.edu/~doug/cs118/map.compose.html
+* http://bingweb.binghamton.edu/~head/CS471/NOTES/HASKELL/6hSpr01.html
+* https://stackoverflow.com/questions/940382/what-is-the-difference-between-dot-and-dollar-sign/13700768#13700768
+  
 ## Integrante(s)
 
 * Ángel Iván Gladín García - *angelgladin@ciencias.unam.mx*
