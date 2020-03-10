@@ -1,0 +1,1 @@
+foldl f e xs = foldr (flip f) e (reverse xs)

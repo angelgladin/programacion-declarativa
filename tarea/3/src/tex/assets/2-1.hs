@@ -1,0 +1,1 @@
+data Tree a = Void | Node (Tree a) a (Tree a)

@@ -1,0 +1,232 @@
+%%%
+ %
+ % Copyright (C) 2020 Ángel Iván Gladín García
+ %
+ % This program is free software: you can redistribute it and/or modify
+ % it under the terms of the GNU General Public License as published by
+ % the Free Software Foundation, either version 3 of the License, or
+ % (at your option) any later version.
+ %
+ % This program is distributed in the hope that it will be useful,
+ % but WITHOUT ANY WARRANTY; without even the implied warranty of
+ % MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ % GNU General Public License for more details.
+ %
+ % You should have received a copy of the GNU General Public License
+ % along with this program.  If not, see <http://www.gnu.org/licenses/>.
+%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=.7in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\decimalpoint
+
+\usepackage{listings}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{float}
+
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage{commath}
+
+\usepackage{bbm}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{longtable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+\usepackage{import}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{listings}
+\usepackage{color}
+
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage{minted}
+\usemintedstyle{monokai}
+
+\pagecolor{black}
+\color{white}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Pro}{\mathds{P}}
+\newcommand{\Oh}{\mathcal{O}} %% Notacion "O"
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\ord}{\text{ord}}
+\newcommand{\sol}{\textbf{\underline{Solución}: }} %% Solucion
+\newcommand{\af}{\textbf{\underline{Afirmación}: }}
+\newcommand{\cej}{\textbf{\underline{Contraejemplo}: }}
+
+\newcommand{\code}[1]{\textcolor{WildStrawberry}{\texttt{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{
+        Universidad Nacional Autónoma de México\\
+        Facultad de Ciencias\\
+        Programación Declarativa\\
+    \vspace{.5cm}
+    \large
+        \textbf{Tarea 3} Parte Teórica
+}
+\author{
+    Ángel Iván Gladín García\\
+    No. cuenta: 313112470\\
+    \texttt{angelgladin@ciencias.unam.mx}
+}
+\date{12 de Marzo 2020}
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{theorem}{Teorema}
+\newtheorem{example}{Ejemplo}
+\newtheorem{corollary}{Corolario}
+\newtheorem{lemma}{Lemma}
+\newtheorem{definition}{Definicion}
+\newtheorem{prop}{Proposicion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%% 1
+
+\subsection*{Definiciones de funciones}
+
+\noindent
+{\color{WildStrawberry} \rule{\linewidth}{0.4mm} }
+
+\inputminted{haskell}{assets/def-map.hs}
+
+\noindent
+{\color{WildStrawberry} \rule{\linewidth}{0.4mm} }
+
+\inputminted{haskell}{assets/def-flip.hs}
+
+\noindent
+{\color{WildStrawberry} \rule{\linewidth}{0.4mm} }
+
+\inputminted{haskell}{assets/def-concat.hs}
+
+\noindent
+{\color{WildStrawberry} \rule{\linewidth}{0.4mm} }
+
+\inputminted{haskell}{assets/def-foldr.hs}
+
+\noindent
+{\color{WildStrawberry} \rule{\linewidth}{0.4mm} }
+
+\inputminted{haskell}{assets/def-foldl.hs}
+
+\noindent
+{\color{WildStrawberry} \rule{\linewidth}{0.4mm} }
+
+\inputminted{haskell}{assets/def-reverse.hs}
+
+\noindent
+{\color{WildStrawberry} \rule{\linewidth}{0.4mm} }
+
+\begin{enumerate}
+\item Demuestra las siguientes propiedades de los operadores de plegado:
+
+\begin{enumerate}[label=\alph*)]
+    %%%%%%%% 1.a
+    \item \inputminted{haskell}{assets/1-a.hs}
+    \begin{proof}
+        \hfill
+        \inputminted{haskell}{assets/1-a-proof.hs}
+    \end{proof}
+
+    %%%%%%%% 1.b
+    \item \inputminted{haskell}{assets/1-b.hs}
+    \begin{proof}
+        \hfill
+        \inputminted{haskell}{assets/1-b-proof.hs}
+    \end{proof}
+
+    %%%%%%%% 1.c
+    \item \inputminted{haskell}{assets/1-c.hs}
+    \begin{proof}
+        \hfill
+        \inputminted{haskell}{assets/1-c-proof.hs}
+    \end{proof}
+\end{enumerate}
+
+%%%%%%%% 2
+\item Considera el siguiente tipo de dato algebraico en Haskell para definir árboles binarios.
+
+\inputminted{haskell}{assets/2-1.hs}
+
+Y la función \texttt{foldT} que define el operador de plegado para la estructura Tree, definido como sigue:
+
+\inputminted{haskell}{assets/2-2.hs}
+
+\begin{enumerate}[label=\alph*)]
+    %%%%%%%% 2.a
+    \item Da en términos de una función \code{h} el patrón encapsulado por el operador \code{foldT}.
+    
+    %TODO
+
+    %%%%%%%% 2.b
+    \item Enuncia y demuestra la propiedad Universal del operador \code{foldT}, basándote en la
+    Propiedad Universal vista en clase sobre el operador \code{foldr} de listas.
+
+    %TODO
+\end{enumerate}
+
+%%%%%%%% 3
+\item Calcula una definición eficiente para \code{scanr} partiendo de la siguiente:
+
+\inputminted{haskell}{assets/3.hs}
+
+%%%%%%%% 4
+\item Considera la siguiente definición de la función \code{cp} que calcula el producto cartesiano.
+
+\inputminted{haskell}{assets/4-1.hs}
+
+\begin{enumerate}[label=\alph*)]
+    
+    %%%%%%%% 4.a
+    \item En la definición anterior ¿Quiénes son \code{f} y \code{e}?
+    
+    %TODO
+    
+    %%%%%%%% 4.b
+    \item Dada la siguiente ecuación
+    \inputminted{haskell}{assets/4-b.hs}
+
+    en donde \code{length} calcula la longitud de una lista y \code{product} regresa el resultado de la
+    multiplicación de todos los elementos de una lista. Demuestra que la ecuación es cierta, para esto
+    es necesario reescribir ambos lados de la ecuación como instancias de \code{foldr} y ver que son idénticas.
+\end{enumerate}
+
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

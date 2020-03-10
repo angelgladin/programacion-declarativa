@@ -1,0 +1,1 @@
+foldr f e (xs ++ ys) = foldr f (foldr f e ys) xs
