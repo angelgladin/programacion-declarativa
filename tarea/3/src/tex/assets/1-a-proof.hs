@@ -1,5 +1,3 @@
-foldr f e . map g = foldr (f . g) e
-
 -- Caso ([])
     (foldr f e . map g) []       -- Caso ([])
         = foldr f e (map g [])   -- Aplicación de función

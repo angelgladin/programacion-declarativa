@@ -32,7 +32,9 @@ Se encuentra en la raíz del proyecto con el nombre de `parte-teorica.pdf`.
 
 ## Referencias
 
-* h
+* http://hackage.haskell.org/package/base-4.6.0.0/docs/src/GHC-Base.html#flip
+* https://hackage.haskell.org/package/base-4.12.0.0/docs/src/GHC.List.html
+* https://wiki.haskell.org/99_questions/Solutions/5
 
 ## Integrante(s)
 

@@ -1,2 +1,3 @@
 reverse :: [a] -> [a]
-reverse = foldl (flip (:)) []    -- (reverse.1)
+reverse [] = []                       -- (reverse.1)
+reverse (x:xs) = reverse xs ++ [x]    -- (reverse.2)
