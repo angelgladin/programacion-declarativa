@@ -5,7 +5,7 @@
 Programación Declarativa - Facultad de Ciencias, UNAM.
 
 * Profesor: Favio E. Miranda Perea
-* Ayudante	Javier Enríquez Mendoza
+* Ayudante:	Javier Enríquez Mendoza
 
 ## Descripción de la práctica
 
@@ -32,6 +32,7 @@ Se encuentra en la raíz del proyecto con el nombre de `parte-teorica.pdf`.
 ## Referencias
 
 * Hutton, Graham. (1999). A Tutorial on the Universality and Expressiveness of Fold. Journal of Functional Programming. 9. 10.1017/S0956796899003500.
+* Bird, Richard S.. “Thinking Functionally with Haskell.” (2014).
 * Richard Bird. 2010. Pearls of Functional Algorithm Design (1st. ed.). Cambridge University Press, USA.
 * https://hackage.haskell.org/package/base-4.12.0.0/docs/Data-List.html#v:inits
 * https://www.haskell.org/onlinereport/haskell2010/haskellch5.html

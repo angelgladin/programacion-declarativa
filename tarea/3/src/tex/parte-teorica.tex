@@ -37,7 +37,7 @@
 \usepackage{bbm}
 \usepackage{dsfont}
 \usepackage{mathrsfs}
-\usepackage{amsmath,amsthm,amssymb}
+\usepackage{amsmath,amsthm,amssymb,wasysym}
 \usepackage{mathtools}
 \usepackage{longtable}
 
@@ -94,18 +94,10 @@
     No. cuenta: 313112470\\
     \texttt{angelgladin@ciencias.unam.mx}
 }
-\date{12 de Marzo 2020}
+\date{17 de Marzo 2020}
 \maketitle
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newtheorem{theorem}{Teorema}
-\newtheorem{example}{Ejemplo}
-\newtheorem{corollary}{Corolario}
-\newtheorem{lemma}{Lemma}
-\newtheorem{definition}{Definicion}
-\newtheorem{prop}{Proposicion}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -142,6 +134,11 @@
 {\color{WildStrawberry} \rule{\linewidth}{0.4mm} }
 
 \inputminted{haskell}{assets/def-reverse.hs}
+
+\noindent
+{\color{WildStrawberry} \rule{\linewidth}{0.4mm} }
+
+\inputminted{haskell}{assets/def-tails.hs}
 
 \noindent
 {\color{WildStrawberry} \rule{\linewidth}{0.4mm} }
@@ -185,19 +182,24 @@ Y la función \code{foldT} que define el operador de plegado para la estructura 
     %%%%%%%% 2.a
     \item Da en términos de una función \code{h} el patrón encapsulado por el operador \code{foldT}.
     
-    %TODO
+    \inputminted{haskell}{assets/2-a-answer.hs}
 
     %%%%%%%% 2.b
     \item Enuncia y demuestra la propiedad Universal del operador \code{foldT}, basándote en la
     Propiedad Universal vista en clase sobre el operador \code{foldr} de listas.
 
-    %TODO
+    $\frownie$
 \end{enumerate}
 
 %%%%%%%% 3
 \item Calcula una definición eficiente para \code{scanr} partiendo de la siguiente:
 
 \inputminted{haskell}{assets/3.hs}
+
+\noindent
+{\color{Turquoise} \rule{\linewidth}{0.4mm} }
+
+\inputminted{haskell}{assets/3-answer.hs}
 
 %%%%%%%% 4
 \item Considera la siguiente definición de la función \code{cp} que calcula el producto cartesiano.
@@ -209,7 +211,7 @@ Y la función \code{foldT} que define el operador de plegado para la estructura 
     %%%%%%%% 4.a
     \item En la definición anterior ¿Quiénes son \code{f} y \code{e}?
     
-    %TODO
+    \inputminted{haskell}{assets/4-a-answer.hs}
     
     %%%%%%%% 4.b
     \item Dada la siguiente ecuación
@@ -218,6 +220,9 @@ Y la función \code{foldT} que define el operador de plegado para la estructura 
     en donde \code{length} calcula la longitud de una lista y \code{product} regresa el resultado de la
     multiplicación de todos los elementos de una lista. Demuestra que la ecuación es cierta, para esto
     es necesario reescribir ambos lados de la ecuación como instancias de \code{foldr} y ver que son idénticas.
+
+    \inputminted{haskell}{assets/4-b-answer.hs}
+
 \end{enumerate}
 
 
