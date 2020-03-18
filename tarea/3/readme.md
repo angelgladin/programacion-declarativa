@@ -16,6 +16,7 @@ En el archivo de especificación de la prática viene todo explicado
 
 * `ghci`: The Glorious Glasgow Haskell Compilation System, version 8.6.5
 * `latexmk`: Latexmk, John Collins, 17 Jan. 2018. Version 4.55
+* `hindent`: hindent 5.3.1
 
 ## Ejecución
 
@@ -24,17 +25,16 @@ ejecutar `ghci` y después `:l src/hs/pset3.hs` como se muestra enseguida,
 
 ![](assets/1.png)
 
-
-
 ### Parte teórica
 
 Se encuentra en la raíz del proyecto con el nombre de `parte-teorica.pdf`.
 
 ## Referencias
 
-* http://hackage.haskell.org/package/base-4.6.0.0/docs/src/GHC-Base.html#flip
-* https://hackage.haskell.org/package/base-4.12.0.0/docs/src/GHC.List.html
-* https://wiki.haskell.org/99_questions/Solutions/5
+* Hutton, Graham. (1999). A Tutorial on the Universality and Expressiveness of Fold. Journal of Functional Programming. 9. 10.1017/S0956796899003500.
+* Richard Bird. 2010. Pearls of Functional Algorithm Design (1st. ed.). Cambridge University Press, USA.
+* https://hackage.haskell.org/package/base-4.12.0.0/docs/Data-List.html#v:inits
+* https://www.haskell.org/onlinereport/haskell2010/haskellch5.html
 
 ## Integrante(s)
 
